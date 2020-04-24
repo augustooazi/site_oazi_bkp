@@ -1,0 +1,298 @@
+/* Reset */
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	background-color: black;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+/* Fonts */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  margin-bottom: 1em;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+a {
+  color: inherit;
+}
+
+.icon {
+  fill: white;
+  width: 2em;
+  height: 2em;
+	margin-bottom: 1em;
+}
+
+/* Navbar */
+
+nav {
+  display: none;
+}
+
+@media screen and (min-width: 640px) {
+	nav {
+		display: block;
+		width: 100vw;
+		position: fixed;
+		top: 0;
+		height: 50px;
+		background-color: black;
+	}
+
+	nav ul {
+		text-align: center;
+		width: 100%;
+		margin-top: 5px;
+	}
+
+	nav li {
+		display: inline-block;
+		margin: 0 0.5em;
+		padding: 0.5em;
+		font-size: 1em;
+		text-transform: uppercase;
+		border-bottom: 2px solid #AB1A00;
+	}
+
+	nav li a {
+		text-decoration: none;
+	}
+
+	nav li:hover {
+		transition: color 0.3s ease;
+		color: #AAAAAA;
+	}
+
+	.content {
+		margin-top: 50px;
+	}
+
+}
+
+@media screen and (min-width: 960px) {
+  nav {
+    display: block;
+    width: 20vw;
+    height: 100vh;
+    float: left;
+    position: fixed;
+  }
+
+  nav ul {
+    text-align: right;
+    position: absolute;
+    height: 10em;
+    margin-top: -5em;
+    width: 100%;
+    top: 50%;
+    right: 15%;
+  }
+
+	nav li {
+		display: block;
+		border-image-slice: 1;
+		border-image-source: linear-gradient(to right, #000000, #AB1A00);
+		margin: 2em 0;
+	}
+
+  .content {
+    width: 80vw;
+    float: right;
+		margin-top: 0;
+  }
+}
+
+/* Hero */
+header {
+  height: 50vh;
+  background-color: #AB1A00;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+	background-image: url("/images/industry_background.jpg");
+	background-size: cover;
+}
+
+header p {
+  color: white;
+  font-size: 1.3em;
+}
+
+@media screen and (min-width: 640px) {
+  header {
+    text-align: left;
+    padding-left: 7vw;
+  }
+
+}
+
+/* Section General */
+section {
+  padding: 2em;
+}
+
+@media screen and (min-width: 640px) {
+
+  section {
+    padding-right: 7vw;
+    padding-left: 7vw;
+  }
+
+}
+
+/* Section History */
+
+#history {
+  background-color: #000000;
+  color: white;
+}
+
+#history img {
+	max-width: 100%;
+	margin-bottom: 2em;
+}
+
+@media screen and (min-width: 640px) {
+
+	#history {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	#history img {
+		margin-bottom: 0;
+		margin-right: 6vw;
+		height: 100%;
+		width: auto;
+		max-width: 35%;
+	}
+
+}
+
+/* Section Services */
+#services {
+  background-color: #AB1A00;
+}
+
+#desc {
+  margin-bottom: 2em;
+}
+
+.features {
+  display: block;
+  border-radius: 0.25em;
+  border: solid 2px #666666;
+}
+
+.features article {
+  padding: 2em 3em;
+  border-bottom: solid 2px #666666;
+  background-color: #000000;
+}
+
+.features article:first-child {
+  border-radius: 0.25em 0.25em 0 0;
+}
+
+.features article:last-child {
+  border-bottom: none;
+  border-radius: 0 0 0.25em 0.25em;
+}
+
+@media screen and (min-width: 640px) {
+	.features {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(200px, 1fr));
+	}
+
+	.features article:first-child {
+	  border-radius: 0.25em 0 0 0;
+		border-right: solid 2px #666666;
+	}
+
+	.features article:nth-child(2) {
+		border-radius: 0 0.25em 0 0;
+	}
+
+	.features article:nth-child(3) {
+		border-radius: 0 0 0 0.25em;
+		border-right: solid 2px #666666;
+		border-bottom: none;
+	}
+
+	.features article:last-child {
+	  border-bottom: none;
+	  border-radius: 0 0 0.25em 0;
+	}
+}
+
+/* Section Contact */
+
+#contact {
+  background-color: #DD2200;
+}
+
+#contact li {
+  margin-bottom: 1em;
+}
+
+/* Footer */
+
+footer {
+  background-color: #000000;
+  text-align: right;
+  padding: 1em;
+}
