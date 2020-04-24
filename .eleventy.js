@@ -2,7 +2,7 @@ module.exports = function(config) {
 
   config.addPassthroughCopy('images');
   config.addPassthroughCopy('apple-touch-icon.png');
-  config.addPassthroughCopy('favicon-ico');
+  config.addPassthroughCopy('favicon.ico');
   config.addPassthroughCopy('_includes/css/');
 
   return {
